@@ -1,13 +1,23 @@
 package com.example.quote_generator.data.database
 
 import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.quote_generator.data.entity.QuoteEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface QuotesDao {
+
     @Query("SELECT * FROM quotes")
-    suspend fun getAllQuotes(): List<QuoteEntity>
+    suspend fun getAllQuotes(): List<QuoteEntity>  // ← Для initQuotesIfEmpty()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertQuotes(quotes: List<QuoteEntity>)
+
+    @Query("SELECT * FROM quotes")
+    fun getAllQuotesFlow(): Flow<List<QuoteEntity>>
 
     @Query("SELECT * FROM quotes ORDER BY RANDOM() LIMIT 1")
     suspend fun getRandomQuote(): QuoteEntity
