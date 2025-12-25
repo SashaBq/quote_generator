@@ -95,7 +95,6 @@ fun QuoteItemCard(
                 .padding(18.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Иконка / аватар автора
             Box(
                 modifier = Modifier
                     .size(44.dp)

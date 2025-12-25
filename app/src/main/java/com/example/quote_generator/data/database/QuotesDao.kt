@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 interface QuotesDao {
 
     @Query("SELECT * FROM quotes")
-    suspend fun getAllQuotes(): List<QuoteEntity>  // ← Для initQuotesIfEmpty()
+    suspend fun getAllQuotes(): List<QuoteEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertQuotes(quotes: List<QuoteEntity>)

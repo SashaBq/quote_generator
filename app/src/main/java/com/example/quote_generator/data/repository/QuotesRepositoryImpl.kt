@@ -30,13 +30,11 @@ class QuotesRepositoryImpl @Inject constructor(
             ?: Quote(0, "Цитаты загружаются...", "Система", false)
     }
 
-    // ✅ suspend List (для UseCase)
     override suspend fun getAllQuotes(): List<Quote> {
         val entities = dao.getAllQuotes()
         return QuoteMapper.mapToDomainList(entities)
     }
 
-    // ✅ Flow (для UI)
     override fun getAllQuotesFlow(): Flow<List<Quote>> {
         return dao.getAllQuotesFlow()
             .map { QuoteMapper.mapToDomainList(it) }
