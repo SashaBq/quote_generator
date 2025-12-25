@@ -1,4 +1,4 @@
-package com.example.quote_generator.ui.theme
+package com.example.quote_generator.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

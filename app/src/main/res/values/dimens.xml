@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Card -->
+    <string name="card_width_factor">0.88</string>
+    <dimen name="card_aspect_ratio_width">3.2</dimen>
+    <dimen name="card_aspect_ratio_height">4.5</dimen>
+    <dimen name="card_corner_radius">24dp</dimen>
+    <dimen name="card_elevation">28dp</dimen>
+    <!-- Padding -->
+    <dimen name="screen_padding">32dp</dimen>
+    <dimen name="card_content_padding">36dp</dimen>
+    <!-- Icon -->
+    <dimen name="quote_icon_size">44dp</dimen>
+    <dimen name="icon_padding_bottom">20dp</dimen>
+    <!-- Text -->
+    <dimen name="text_padding_bottom">28dp</dimen>
+    <!-- FAB -->
+    <dimen name="fab_list_size">64dp</dimen>
+    <dimen name="fab_refresh_size">72dp</dimen>
+    <dimen name="fab_icon_list_size">28dp</dimen>
+    <dimen name="fab_icon_refresh_size">32dp</dimen>
+</resources>
